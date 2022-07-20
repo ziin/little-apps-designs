@@ -1,9 +1,10 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
+
 import { ThemeProvider } from 'styled-components';
-import { theme } from './styles/theme';
 
 import App from './app/app';
+import { theme } from './styles/theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
