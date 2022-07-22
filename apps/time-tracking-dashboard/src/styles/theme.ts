@@ -1,11 +1,8 @@
-import { DefaultTheme } from 'styled-components';
-
 function pxToRem(px: number) {
   return `${px / 16}rem`;
 }
 
-// Styled components theme
-export const theme: DefaultTheme = {
+export default {
   colors: {
     primary: 'hsl(246, 80%, 60%)',
 
@@ -22,6 +19,7 @@ export const theme: DefaultTheme = {
     darkBlue: 'hsl(235, 46%, 20%)',
     desaturatedBlue: 'hsl(235, 45%, 61%)',
     paleBlue: 'hsl(236, 100%, 87%)',
+    white: '#F9FCFF',
   },
   fonts: {
     primary: '"Rubik", sans-serif',
@@ -29,6 +27,8 @@ export const theme: DefaultTheme = {
   fontSizes: {
     s: pxToRem(15),
     m: pxToRem(18),
+    ms: pxToRem(24),
+    xm: pxToRem(32),
     l: pxToRem(40),
     xl: pxToRem(56),
   },
