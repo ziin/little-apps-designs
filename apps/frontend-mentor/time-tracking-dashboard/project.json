@@ -79,6 +79,13 @@
         "jestConfig": "apps/frontend-mentor/time-tracking-dashboard/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "builder": "@netlify-builder/deploy:deploy",
+      "options": {
+        "outputPath": "dist/apps/frontend-mentor/time-tracking-dashboard",
+        "siteId": "71e7a0b7-eaef-4627-82d3-0d6f4968a75b"
+      }
     }
   },
   "tags": []
