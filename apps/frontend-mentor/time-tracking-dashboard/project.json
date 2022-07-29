@@ -1,6 +1,6 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/time-tracking-dashboard/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/frontend-mentor/time-tracking-dashboard/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,15 +9,15 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/time-tracking-dashboard",
-        "index": "apps/time-tracking-dashboard/src/index.html",
+        "outputPath": "dist/apps/frontend-mentor/time-tracking-dashboard",
+        "index": "apps/frontend-mentor/time-tracking-dashboard/src/index.html",
         "baseHref": "/",
-        "main": "apps/time-tracking-dashboard/src/main.tsx",
-        "polyfills": "apps/time-tracking-dashboard/src/polyfills.ts",
-        "tsConfig": "apps/time-tracking-dashboard/tsconfig.app.json",
+        "main": "apps/frontend-mentor/time-tracking-dashboard/src/main.tsx",
+        "polyfills": "apps/frontend-mentor/time-tracking-dashboard/src/polyfills.ts",
+        "tsConfig": "apps/frontend-mentor/time-tracking-dashboard/tsconfig.app.json",
         "assets": [
-          "apps/time-tracking-dashboard/src/favicon.ico",
-          "apps/time-tracking-dashboard/src/assets"
+          "apps/frontend-mentor/time-tracking-dashboard/src/favicon.ico",
+          "apps/frontend-mentor/time-tracking-dashboard/src/assets"
         ],
         "styles": [],
         "scripts": [],
@@ -33,8 +33,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/time-tracking-dashboard/src/environments/environment.ts",
-              "with": "apps/time-tracking-dashboard/src/environments/environment.prod.ts"
+              "replace": "apps/frontend-mentor/time-tracking-dashboard/src/environments/environment.ts",
+              "with": "apps/frontend-mentor/time-tracking-dashboard/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -50,15 +50,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "time-tracking-dashboard:build",
+        "buildTarget": "frontend-mentor-time-tracking-dashboard:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "time-tracking-dashboard:build:development"
+          "buildTarget": "frontend-mentor-time-tracking-dashboard:build:development"
         },
         "production": {
-          "buildTarget": "time-tracking-dashboard:build:production",
+          "buildTarget": "frontend-mentor-time-tracking-dashboard:build:production",
           "hmr": false
         }
       }
@@ -68,15 +68,15 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "apps/time-tracking-dashboard/**/*.{ts,tsx,js,jsx}"
+          "apps/frontend-mentor/time-tracking-dashboard/**/*.{ts,tsx,js,jsx}"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/time-tracking-dashboard"],
+      "outputs": ["coverage/apps/frontend-mentor/time-tracking-dashboard"],
       "options": {
-        "jestConfig": "apps/time-tracking-dashboard/jest.config.ts",
+        "jestConfig": "apps/frontend-mentor/time-tracking-dashboard/jest.config.ts",
         "passWithNoTests": true
       }
     }

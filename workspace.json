@@ -2,6 +2,6 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "time-tracking-dashboard": "apps/time-tracking-dashboard"
+    "frontend-mentor-time-tracking-dashboard": "apps/frontend-mentor/time-tracking-dashboard"
   }
 }
