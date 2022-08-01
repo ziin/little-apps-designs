@@ -25,13 +25,13 @@ const ReportInfo = ({ name, avatarUrl }: ReportInfoProps) => (
     </Header>
     <Body>
       <Button>
-        <Text>Daily</Text>
+        <Text as="span">Daily</Text>
       </Button>
       <Button>
-        <Text>Weekly</Text>
+        <Text as="span">Weekly</Text>
       </Button>
       <Button>
-        <Text>Monthly</Text>
+        <Text as="span">Monthly</Text>
       </Button>
     </Body>
   </Container>
@@ -117,7 +117,6 @@ const Body = styled.div`
 `;
 
 const Button = styled.button`
-  margin: 0;
   appearance: none;
   border: none;
   background-color: transparent;
