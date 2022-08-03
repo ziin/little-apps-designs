@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "frontend-mentor-expenses-chart-component": "apps/frontend-mentor/expenses-chart-component",
     "frontend-mentor-time-tracking-dashboard": "apps/frontend-mentor/time-tracking-dashboard"
   }
 }
