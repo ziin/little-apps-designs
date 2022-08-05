@@ -11,6 +11,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
     "baseUrl": "./src",
     "paths": {
       "@styles/*": ["styles/*"],
