@@ -1,0 +1,85 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/frontend-mentor/product-preview-card-component/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/frontend-mentor/product-preview-card-component",
+        "index": "apps/frontend-mentor/product-preview-card-component/src/index.html",
+        "baseHref": "/",
+        "main": "apps/frontend-mentor/product-preview-card-component/src/main.tsx",
+        "polyfills": "apps/frontend-mentor/product-preview-card-component/src/polyfills.ts",
+        "tsConfig": "apps/frontend-mentor/product-preview-card-component/tsconfig.app.json",
+        "assets": [
+          "apps/frontend-mentor/product-preview-card-component/src/favicon.ico",
+          "apps/frontend-mentor/product-preview-card-component/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/frontend-mentor/product-preview-card-component/src/environments/environment.ts",
+              "with": "apps/frontend-mentor/product-preview-card-component/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "frontend-mentor-product-preview-card-component:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "frontend-mentor-product-preview-card-component:build:development"
+        },
+        "production": {
+          "buildTarget": "frontend-mentor-product-preview-card-component:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/frontend-mentor/product-preview-card-component/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+
+    "deploy": {
+      "builder": "@netlify-builder/deploy:deploy",
+      "options": {
+        "outputPath": "dist/apps/frontend-mentor/product-preview-card-component",
+        "siteId": "9295fdc8-113b-4bda-a80b-3d4a96709626"
+      }
+    }
+  },
+  "tags": []
+}
